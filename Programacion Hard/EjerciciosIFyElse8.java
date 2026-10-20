@@ -1,33 +1,53 @@
+
 import java.util.Scanner;
 
 public class EjerciciosIFyElse8 {
-    public static void main(String[] args) {   
-
+    public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        double Money = 0;
-        double Impuesto1 = 25;
-        double Impuesto2 = 45;
-        System.out.println("Dime tu nombre");
+        System.out.println("Dime tu nombre:");
         String nombre = entrada.nextLine();
-        System.out.println("Buenas " + nombre + " Dime cuantas horas tienes trabajadas");
-        double Horas = entrada.nextDouble();
-        System.out.println("Perfecto tienes trabajas " + Horas + " Horas");
-        double TarifaNormal = 12;
-        
-        if (Horas <= 35) {
-            System.out.println("Dinero: " + (Horas * TarifaNormal));
-        }if (Horas > 35) {
-            Money = ((35 * TarifaNormal) + ((Horas - 35) * (TarifaNormal * 1.5)));
-            System.out.println("Dinero: " + Money);
+
+        System.out.println("Dime las horas trabajadas:");
+        double horas = entrada.nextDouble();
+
+        double bruto;
+        double impuesto25 = 0;
+        double impuesto45 = 0;
+        double impuesto;
+
+        if (horas <= 35) {
+            bruto = horas * 12;
+        } else {
+            bruto = 35 * 12 + (horas - 35) * 18;
         }
-        
-        if (Money <= 500) {
-            System.out.println("Estas libre de impuestos");
-        } if (Money <= 900 ) {
-            System.out.println("Tienes un impuesto del 25%: " + (((Money - 500) / Impuesto1) * 100));
+
+        if (bruto <= 500) {
+            impuesto25 = 0;
+            impuesto45 = 0;
+        } else if (bruto <= 900) {
+            impuesto25 = (bruto - 500) * 25 / 100;
+            impuesto45 = 0;
+        } else {
+            impuesto25 = 400 * 25 / 100;
+            impuesto45 = (bruto - 900) * 45 / 100;
         }
-       
+
+        impuesto = impuesto25 + impuesto45;
+
+        System.out.println("Empleado: " + nombre);
+
+        System.out.println("Salario bruto: " + bruto + " euros");
+
+        System.out.println("Impuesto del 25%: " + impuesto25 + " euros");
+
+        System.out.println("Impuesto del 45%: " + impuesto45 + " euros");
+
+        System.out.println("Total de impuestos: " + impuesto + " euros");
+        
+        System.out.println("Salario neto: " + (bruto - impuesto) + " euros");
+
         entrada.close();
     }
 }
+
