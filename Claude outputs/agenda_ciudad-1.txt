@@ -1,0 +1,8 @@
+Barcelona      03
+Bilbao         09
+Getafe         08
+Getafe         01
+Madrid         02
+Madrid         06
+Sevilla        04
+Zaragoza       07
