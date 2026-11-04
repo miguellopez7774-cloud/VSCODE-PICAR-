@@ -1,0 +1,142 @@
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 25px;
+}
+
+/* TITULO PRINCIPAL */
+h1 {
+    color: #e63939;
+    text-align: center;
+    font-size: 38px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    color: #e63939;
+    margin: 30px 0 15px;
+    border-bottom: 2px solid #a51c1c;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #bbb;
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+h6 {
+    color: #888;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+/* MENU DE NAVEGACION */
+Listatab {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 20px;
+    border-top: 2px solid #a51c1c;
+    border-bottom: 2px solid #a51c1c;
+}
+
+.Listatab li {
+    color: white;
+    font-weight: bold;
+}
+
+.Listatab a {
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.Listatab a:hover {
+    color: #e63939;
+}
+
+/* SEPARADOR */
+hr {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 30px 0;
+}
+
+/* PARRAFOS */
+p {
+    max-width: 850px;
+    margin: 15px auto;
+    color: #ccc;
+    font-size: 17px;
+    text-align: justify;
+}
+
+/* IMAGEN DE LA PELICULA */
+img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin: 25px auto;
+    border: 3px solid #a51c1c;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #e63939;
+}
+
+/* VIDEO */
+iframe {
+    display: block;
+    max-width: 100%;
+    margin: 25px auto;
+    border: 3px solid #a51c1c;
+    border-radius: 8px;
+}
+
+/* ENLACES */
+a {
+    transition: 0.3s;
+}
+
+/* ADAPTACION A MOVILES */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .Listatab {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 220px;
+    }
+}
