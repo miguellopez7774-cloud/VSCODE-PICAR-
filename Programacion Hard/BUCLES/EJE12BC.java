@@ -2,19 +2,43 @@ import java.util.Scanner;
 
 public class EJE12BC {
     public static void main(String[] args) {
-        
+
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Dime un numerin del 1 al 100 y lo adivino");
-        System.out.println("1 es que es mas bajo, 2 es que es mas alto y 3 es que es el numero");
-        int N = entrada.nextInt();
+
+        int minimo = 1;
+        int maximo = 100;
         int adivinar = 0;
-        if (N <= 100  && N >= 0) {
-            while (N != adivinar) {
-                System.out.println("tu numero es" + (N - 10));
+        int respuesta = 0;
+
+        System.out.println("Piensa un numero del 1 al 100.");
+
+        while (respuesta != 3) {
+
+            adivinar = (minimo + maximo) / 2;
+
+            System.out.println("¿Tu numero es " + adivinar + "?");
+            System.out.println("1 = Mi numero es menor");
+            System.out.println("2 = Mi numero es mayor");
+            System.out.println("3 = Has acertado");
+
+            respuesta = entrada.nextInt();
+
+            if (respuesta == 1) {
+                maximo = adivinar - 1;
+            } else if (respuesta == 2) {
+                minimo = adivinar + 1;
+            } else if (respuesta == 3) {
+                System.out.println("¡He acertado!");
+            } else {
+                System.out.println("Respuesta incorrecta.");
             }
-        }else {
-            System.out.println("Es del 1 al 100 gracioso");
+
+            if (minimo > maximo && respuesta != 3) {
+                System.out.println("¡Te has equivocado con las pistas!");
+                break;
+            }
         }
+
         entrada.close();
     }
 }

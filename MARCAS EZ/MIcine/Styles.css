@@ -1,142 +1,173 @@
 
-/* ESTILOS GENERALES */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilo general de la pagina */
 body {
-    background-color: #111;
-    color: #eee;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    padding: 25px;
+    color: rgb(40, 40, 40);
+    background-color: #f4f4f4;
+    margin: 0;
 }
 
-/* TITULO PRINCIPAL */
-h1 {
-    color: #e63939;
+/* Cabecera principal */
+header {
+    background-color: #292929;
+    color: white;
+    padding: 15px;
     text-align: center;
-    font-size: 38px;
-    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2cm;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    color: #d6b36a;
+}
+
+/* Menu de navegacion */
+nav {
+    background-color: #8b1e1e;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contenido principal */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Estilo de los recuadros */
+section {
+    background-color: #e9d5c0;
+    padding: 20px;
+    border: 1px solid #502d2d;
+    margin-bottom: 25px;
+}
+
+/* Recuadro de bienvenida */
+#H67 {
+    background-color: #d6b36a;
+    border: 2px solid #8b1e1e;
+    text-align: center;
+}
+
+/* Articulos */
+article {
+    background-color: #eeeeee;
+    padding: 20px;
+    border: 1px solid #502d2d;
+    margin-bottom: 25px;
+}
+
+/* Titulos */
+h1, h2 {
+    color: rgb(68, 61, 48);
+}
+
+h2, p {
+    font-style: italic;
 }
 
 h2 {
-    color: #e63939;
-    margin: 30px 0 15px;
-    border-bottom: 2px solid #a51c1c;
+    border-bottom: 2px solid #8b1e1e;
     padding-bottom: 8px;
 }
 
 h3 {
-    color: #bbb;
+    color: #8b1e1e;
+}
+
+/* Texto */
+h1 {
     text-align: center;
-    font-size: 23px;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-h6 {
-    color: #888;
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 12px;
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* MENU DE NAVEGACION */
-Listatab {
-    background-color: #222;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    list-style: none;
-    padding: 20px;
-    border-top: 2px solid #a51c1c;
-    border-bottom: 2px solid #a51c1c;
+/* Listas dentro de las secciones */
+section ul {
+    list-style-type: square;
 }
 
-.Listatab li {
-    color: white;
+/* Texto destacado */
+article em {
+    color: rgb(226, 43, 43);
     font-weight: bold;
 }
 
-.Listatab a {
-    color: #eee;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.Listatab a:hover {
-    color: #e63939;
-}
-
-/* SEPARADOR */
-hr {
-    border: none;
-    border-top: 1px solid #555;
-    margin: 30px 0;
-}
-
-/* PARRAFOS */
-p {
-    max-width: 850px;
-    margin: 15px auto;
-    color: #ccc;
-    font-size: 17px;
-    text-align: justify;
-}
-
-/* IMAGEN DE LA PELICULA */
+/* Imagen de la pelicula */
 img {
-    display: block;
     width: 300px;
     max-width: 100%;
-    margin: 25px auto;
-    border: 3px solid #a51c1c;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #e63939;
-}
-
-/* VIDEO */
-iframe {
     display: block;
+    margin: 15px auto;
+    border: 3px solid #502d2d;
+}
+
+/* Video */
+iframe {
     max-width: 100%;
-    margin: 25px auto;
-    border: 3px solid #a51c1c;
-    border-radius: 8px;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #502d2d;
 }
 
-/* ENLACES */
-a {
-    transition: 0.3s;
+/* Pie de pagina */
+footer {
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
-/* ADAPTACION A MOVILES */
-@media (max-width: 600px) {
-    body {
-        padding: 12px;
-    }
+nav ul li{
+    display: inline;
+    margin-right: 15px;
+}
+a:link, a:visited{
+    color: #228b1e;
+}
 
-    h1 {
-        font-size: 27px;
-    }
+a:hover {
+    color: #000000;
+}
 
-    .Listatab {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
+a:active{
+    color: #d6b36a;
+}
 
-    iframe {
-        width: 100%;
-        height: 220px;
-    }
+table {
+    width: 100%;
+    
+}
+th, td {
+    border: solid color(srgb rgb(0, 0, 0) rgb(0, 0, 0) blue);
+    text-align: center;
+}
+
+th {
+    background-color: #000000;
+    color: #ffff;
+    
 }

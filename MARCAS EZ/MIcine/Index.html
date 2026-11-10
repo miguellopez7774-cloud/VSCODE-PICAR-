@@ -1,47 +1,209 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fight Club</title>
     <link rel="stylesheet" href="Styles.css">
-    <h6>4 de noviembre del 2026 // Miguel Lopez Gonzalez</h6>
-    <H1>PORTAL DE MI CINE</H1>
 </head>
+
 <body>
-    <ul class="Listatab">
-    <li><a href="Index.html">Bienvenida</a></li>
-    <li>Estrenos destacados</li>
-    <li>Nuestra tecnologia</li>
-    <li><a href="Paginas/Pelicula.html">Ver ficha completa del Club de la lucha</a></li>
-    </ul>
-    
+
+    <!-- Cabecera principal -->
+    <header>
+        <h6>4 de noviembre del 2026 // Miguel Lopez Gonzalez</h6>
+        <h1>PORTAL DE MI CINE</h1>
+        <p>El mejor cine a tu alcance</p>
+    </header>
+
+    <!-- Menu de navegacion -->
+    <nav>
+        <ul class="Listatab">
+            <li><a href="Index.html">Bienvenida</a></li>
+            <li><a href="#estrenos">Estrenos destacados</a></li>
+            <li><a href="#tecnologia">Nuestra tecnologia</a></li>
+            <li><a href="#tabla">Catalogo de peliculas</a></li>
+            <li><a href="#formulario">Contacto</a></li>
+            <li>
+                <a href="Paginas/Pelicula.html">
+                    Ficha del Club de la lucha
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <hr>
 
-    <H1>Bienvenido al portal de cine</H1>
-    <H3>El mejor cine a tu alcance</H3>
-        <P>
-        En nuestro cine nos apasionan este arte, somos una empresa encargada de la promocion de pelis
-        antiguas y retro para personas con buen gusto,
-        </P>
-        <p>
-        no nos gustan las pelis sencillas nos gusta que
-        nuestro cliente quiera verla otra vez es toda una experiencia
-        </p>
+    <main>
 
-        <H2>Estrenos de la semana, El club de la lucha</H2>
-        <h6>Haz clic en la imagen para la redireccion a la ficha de la pelicula</h6>
-        <a href="./Paginas/Pelicula.html"><img src="./IMG/file_79_106.jpg" alt="Fight Club"></a>
-        <h2>Trailer Oficial en youtube</h2>
-        <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/watch?v=iBsiL3NaqhE" 
-        title="Título del vídeo" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-        </iframe>
+        <!-- Seccion de bienvenida -->
+        <section id="H67">
+            <h2>Bienvenido al portal de cine</h2>
+            <h3>El mejor cine a tu alcance</h3>
+
+            <p>
+                Descubre un mundo de peliculas antiguas,
+                clasicas y retro para los verdaderos amantes del cine.
+            </p>
+        </section>
+
+        <!-- Articulo de presentacion -->
+        <article id="Articulo">
+            <h2>¿Quienes somos?</h2>
+
+            <p>
+                En nuestro cine nos apasiona este arte.
+                Somos una empresa encargada de la promocion
+                de peliculas antiguas y retro para personas
+                con buen gusto.
+            </p>
+
+            <p>
+                No nos gustan las peliculas sencillas,
+                nos gusta que nuestro cliente quiera verla
+                otra vez. ¡Es toda una experiencia!
+            </p>
+        </article>
+
+        <!-- Seccion de estrenos -->
+        <section id="estrenos">
+            <h2>Estrenos de la semana</h2>
+
+            <h3>El club de la lucha</h3>
+
+            <p>
+                Una de las peliculas mas destacadas
+                de nuestro portal de cine.
+            </p>
+
+            <p>
+                Haz clic en la imagen para acceder
+                a la ficha completa de la pelicula.
+            </p>
+
+            <a href="./Paginas/Pelicula.html">
+                <img src="./IMG/file_79_106.jpg"
+                alt="Fight Club">
+            </a>
+        </section>
+
+        <!-- Seccion de tecnologia -->
+        <section id="tecnologia">
+            <h2>Nuestra tecnologia</h2>
+
+            <p>
+                Utilizamos recursos multimedia para ofrecer
+                una experiencia cinematografica completa
+                a nuestros visitantes.
+            </p>
+        </section>
+
+        <!-- Tabla dentro de un recuadro -->
+        <section id="tabla">
+            <h2>Catalogo de peliculas</h2>
+
+            <p>
+                Estas son algunas de las peliculas
+                recomendadas de nuestro portal.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Pelicula</th>
+                    <th>Año</th>
+                    <th>Genero</th>
+                </tr>
+
+                <tr>
+                    <td>El club de la lucha</td>
+                    <td>1999</td>
+                    <td>Drama</td>
+                </tr>
+
+                <tr>
+                    <td>El padrino</td>
+                    <td>1972</td>
+                    <td>Crimen</td>
+                </tr>
+
+                <tr>
+                    <td>Matrix</td>
+                    <td>1999</td>
+                    <td>Ciencia ficcion</td>
+                </tr>
+
+                <tr>
+                    <td>Pulp Fiction</td>
+                    <td>1994</td>
+                    <td>Thriller</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Formulario -->
+        <section id="formulario">
+            <h2>Contacta con nuestro cine</h2>
+
+            <p>
+                Introduce tus datos y dinos que pelicula
+                te gustaria ver.
+            </p>
+
+            <form action="#" method="get">
+
+                <label for="nombre">Tu nombre:</label>
+
+                <input type="text" id="nombre"
+                name="nombre" placeholder="Escribe tu nombre">
+
+                <label for="pelicula">Pelicula favorita:</label>
+
+                <input type="text" id="pelicula"
+                name="pelicula" placeholder="Introduce una pelicula">
+
+                <label for="fecha">Fecha de visita:</label>
+
+                <input type="date" id="fecha" name="fecha">
+
+                <label for="opinion">Tu opinion:</label>
+
+                <textarea id="opinion" name="opinion"
+                placeholder="Escribe aqui tu opinion"></textarea>
+
+                <button type="submit">Enviar informacion</button>
+
+                <button type="reset">Borrar datos</button>
+
+            </form>
+        </section>
+
+        <!-- Articulo del trailer -->
+        <article id="Trailer">
+            <h2>Trailer oficial en YouTube</h2>
+
+            <p>
+                Disfruta del trailer oficial de
+                El club de la lucha.
+            </p>
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/iBsiL3NaqhE"
+                title="Trailer de Fight Club"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </article>
+
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p>Portal de mi cine - Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
