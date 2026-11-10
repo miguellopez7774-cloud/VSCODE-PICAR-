@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AlmacenarNumeros {
+public class Eje1AR {
     public static void main(String[] args) {
         final int TAMANO = 10;
         double[] numeros = new double[TAMANO];
