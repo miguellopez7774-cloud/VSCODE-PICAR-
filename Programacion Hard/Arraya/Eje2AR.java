@@ -17,7 +17,6 @@ public class Eje2AR {
         }
         System.out.println(OP1);
 
-       
 
         scanner.close();
     }
